@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Churn Prediction</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Customer Churn Prediction</h1>
+
+    <form action="/predict" method="post">
+
+        <!-- 🔹 Categorical -->
+        <select name="gender" required>
+            <option value="">Select Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+
+        <input type="number" name="age" placeholder="Age" required>
+
+        <input type="text" name="country" placeholder="Country" required>
+        <input type="text" name="city" placeholder="City" required>
+
+        <select name="customer_segment" required>
+            <option value="">Customer Segment</option>
+            <option value="SME">SME</option>
+            <option value="Corporate">Corporate</option>
+        </select>
+
+        <input type="number" name="tenure_months" placeholder="Tenure (months)" required>
+
+        <select name="signup_channel" required>
+            <option value="">Signup Channel</option>
+            <option value="Web">Web</option>
+            <option value="Mobile">Mobile</option>
+        </select>
+
+        <select name="contract_type" required>
+            <option value="">Contract Type</option>
+            <option value="Monthly">Monthly</option>
+            <option value="Yearly">Yearly</option>
+        </select>
+
+        <!-- 🔹 Numeric -->
+        <input type="number" name="monthly_logins" placeholder="Monthly Logins" required>
+        <input type="number" name="avg_session_time" placeholder="Avg Session Time" step="any" required>
+        <input type="number" name="features_used" placeholder="Features Used" required>
+        <input type="number" name="usage_growth_rate" placeholder="Usage Growth Rate" step="any" required>
+        <input type="number" name="last_login_days_ago" placeholder="Last Login Days Ago" required>
+
+        <input type="number" name="monthly_fee" placeholder="Monthly Fee" step="any" required>
+        <input type="number" name="total_revenue" placeholder="Total Revenue" step="any" required>
+
+        <select name="payment_method" required>
+            <option value="">Payment Method</option>
+            <option value="PayPal">PayPal</option>
+            <option value="Card">Card</option>
+        </select>
+
+        <input type="number" name="payment_failures" placeholder="Payment Failures" required>
+
+        <select name="discount_applied" required>
+            <option value="">Discount Applied</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+
+        <select name="price_increase_last_3m" required>
+            <option value="">Price Increased?</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+
+        <input type="number" name="support_tickets" placeholder="Support Tickets" required>
+        <input type="number" name="avg_resolution_time" placeholder="Avg Resolution Time" step="any" required>
+
+        <input type="text" name="complaint_type" placeholder="Complaint Type" required>
+
+        <input type="number" name="csat_score" placeholder="CSAT Score" step="any" required>
+        <input type="number" name="escalations" placeholder="Escalations" required>
+
+        <input type="number" name="email_open_rate" placeholder="Email Open Rate" step="any" required>
+        <input type="number" name="marketing_click_rate" placeholder="Marketing Click Rate" step="any" required>
+
+        <input type="number" name="nps_score" placeholder="NPS Score" required>
+
+        <select name="survey_response" required>
+            <option value="">Survey Response</option>
+            <option value="Satisfied">Satisfied</option>
+            <option value="Unsatisfied">Unsatisfied</option>
+        </select>
+
+        <input type="number" name="referral_count" placeholder="Referral Count" required>
+
+        <!-- 🔥 Submit -->
+        <button type="submit">Predict</button>
+
+    </form>
+</div>
+
+</body>
+</html>
